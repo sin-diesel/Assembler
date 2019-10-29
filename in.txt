@@ -1,0 +1,20 @@
+push 1
+pop bx
+push 1
+pop ax
+push 7
+pop cx
+call factorial
+end
+:factorial
+push bx
+push 1
+add
+pop bx
+push bx
+push ax
+mul
+pop ax
+jb bx cx factorial
+push ax
+end
